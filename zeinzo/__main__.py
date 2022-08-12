@@ -15,12 +15,16 @@ from zeinzo import BOTLOG_CHATID, LOGGER, LOOP, aiosession, bots
 from zeinzo.helpers.misc import git, heroku
 
 MSG_ON = """
-🔥 **Personal-Userbot Berhasil Di Aktifkan**
-━━
-➠ **Userbot Version -** `{}`
-➠ **Ketik** `{}alive` **untuk Mengecheck Bot**
-━━
+🔥 **ZENUB Berhasil Di Aktifkan**
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**⟜ Dev :** [Zein](https://t.me/tdrki_1)
+**⟜ Python:** `3.9.13`
+**⟜ Pyrogram:** `1.4.16`
+**⟜ Pytgcalls:** `3.0.0.dev22`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**Gunakan** `{CMD_HANDLER}alive` **untuk mengecheck bot**
 """
+PIC_ON = "https://telegra.ph/file/03a4d13e03cdd86c45696.jpg"
 
 
 async def main():
@@ -30,7 +34,7 @@ async def main():
             bot.me = await bot.get_me()
             await bot.join_chat("svmbots")
             await bot.join_chat("zeintod")
-            await bot.send_message(BOTLOG_CHATID, MSG_ON.format(BOT_VER, CMD_HANDLER))
+            await bot.send_photo(BOTLOG_CHATID, photo=PIC_ON, caption=MSG_ON.format(BOT_VER, CMD_HANDLER))
         except Exception as a:
             LOGGER("main").warning(a)
     await idle()
