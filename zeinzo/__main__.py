@@ -22,7 +22,7 @@ MSG_ON = """
 **⟜ Pyrogram:** `1.4.16`
 **⟜ Pytgcalls:** `3.0.0.dev22`
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-**Gunakan** `{CMD_HANDLER}alive` **untuk mengecheck bot**
+**Gunakan** `{}alive` **untuk mengecheck bot**
 """
 PIC_ON = "https://telegra.ph/file/03a4d13e03cdd86c45696.jpg"
 
@@ -34,7 +34,7 @@ async def main():
             bot.me = await bot.get_me()
             await bot.join_chat("svmbots")
             await bot.join_chat("zeintod")
-            await bot.send_photo(BOTLOG_CHATID, photo=PIC_ON, caption=MSG_ON.format(BOT_VER, CMD_HANDLER))
+            await bot.send_photo(BOTLOG_CHATID, photo=PIC_ON, caption=MSG_ON.format(CMD_HANDLER))
         except Exception as a:
             LOGGER("main").warning(a)
     await idle()
