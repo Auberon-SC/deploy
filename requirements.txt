@@ -19,6 +19,7 @@ numpy
 prettytable
 psutil
 psycopg2-binary
+removebg
 ptable
 pymediainfo
 pyrogram==1.4.16
